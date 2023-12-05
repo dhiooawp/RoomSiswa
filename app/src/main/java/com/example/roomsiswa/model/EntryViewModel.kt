@@ -49,4 +49,10 @@ fun DetailSiswa.toSiswa(): Siswa = Siswa(
     alamat = alamat,
     telpon = telpon
 )
+fun Siswa.toDetailSiswa(): DetailSiswa = DetailSiswa(
+    id = id,
+    nama = nama,
+    alamat = alamat,
+    telpon = telpon
+)
 
