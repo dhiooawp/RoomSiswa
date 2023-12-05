@@ -39,7 +39,7 @@ import com.example.roomsiswa.model.PenyediaViewModel.Factory
 import com.example.roomsiswa.navigasi.DestinasiNavigasi
 import com.example.roomsiswa.navigasi.SiswaTopAppBar
 
-object DestinasiHome : DestinasiNavigasi {
+object DestinasiHome : DestinasiNavigasi{
     override val route = "home"
     override val titleRes = R.string.app_name
 }
@@ -80,8 +80,7 @@ fun HomeScreen(
             itemSiswa = uiStateSiswa.listSiswa,
             modifier = Modifier
                 .padding(innerPadding)
-                .fillMaxSize()
-        )
+                .fillMaxSize())
     }
 }
 
@@ -89,7 +88,7 @@ fun HomeScreen(
 fun BodyHome(
     itemSiswa: List<Siswa>,
     modifier: Modifier = Modifier
-) {
+){
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
@@ -113,7 +112,7 @@ fun BodyHome(
 fun ListSiswa(
     itemSiswa: List<Siswa>,
     modifier: Modifier = Modifier
-) {
+){
     LazyColumn(modifier = Modifier){
         items(items = itemSiswa, key = {it.id}){
                 person ->
@@ -129,8 +128,8 @@ fun ListSiswa(
 @Composable
 fun DataSiswa(
     siswa: Siswa,
-    modifier: Modifier
-) {
+    modifier: Modifier = Modifier
+){
     Card(
         modifier = modifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
